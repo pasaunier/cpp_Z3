@@ -1,6 +1,6 @@
 #include "point.hpp"
 
-std::ostream & operator<<(std::ostream & flux , const Point & obj)
+std::ostream& operator<<(std::ostream& flux, const Point& obj)
 {
     obj.afficher(flux);
     return flux;
