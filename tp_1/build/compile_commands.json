@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_test.dir/test/catch.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/test/catch.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/test/catch.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_test.dir/test/tp1_test.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/test/tp1_test.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/test/tp1_test.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_test.dir/src/cartesien.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_test.dir/src/point.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_test.dir/src/polaire.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_vecteur.dir/src/main_vecteur.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/main_vecteur.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/main_vecteur.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_vecteur.dir/src/cartesien.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_vecteur.dir/src/point.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_vecteur.dir/src/polaire.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_point.dir/src/main_point.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/main_point.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/main_point.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_point.dir/src/cartesien.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/cartesien.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_point.dir/src/point.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/point.cpp"
+},
+{
+  "directory": "/home/pasaunier/dev/src/cpp_Z3/tp_1/build",
+  "command": "/usr/bin/g++ -I../src -std=gnu++14 -Wall -pedantic -g -O3 -feliminate-unused-debug-types -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -m64 -fasynchronous-unwind-tables -Wp,-D_REENTRANT -ftree-loop-distribute-patterns -Wl,-z -Wl,now -Wl,-z -Wl,relro -fno-semantic-interposition -ffat-lto-objects -fno-trapping-math -Wl,-sort-common -Wl,--enable-new-dtags -mtune=skylake -Wa,-mbranches-within-32B-boundaries -fvisibility-inlines-hidden -Wl,--enable-new-dtags -g -o CMakeFiles/tp1_point.dir/src/polaire.cpp.o -c /home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp",
+  "file": "/home/pasaunier/dev/src/cpp_Z3/tp_1/src/polaire.cpp"
+}
+]
