@@ -14,7 +14,6 @@ class Polaire : public Point
     Polaire();
     Polaire(const double, const double);
     Polaire(const Cartesien&);
-    // Polaire(double, double);
 
     virtual void afficher(std::ostream&) const;
 
@@ -23,6 +22,7 @@ class Polaire : public Point
 
     void setAngle(const double ang) { angle = ang; };
     void setDistance(const double dist) { distance = dist; };
+
     friend std::ostream& operator<<(std::ostream& flux, const Polaire& obj);
     void convertir(Cartesien&) const override;
     void convertir(Polaire&) const override;

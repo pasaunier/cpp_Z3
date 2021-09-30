@@ -36,7 +36,7 @@ void Polaire::convertir(Cartesien& res) const
 void Polaire::convertir(Polaire& res) const
 {
     res.setAngle(angle);
-    res.setDistance(angle);
+    res.setDistance(distance);
 }
 
 Polaire::Polaire(const Cartesien& obj)
