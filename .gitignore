@@ -43,4 +43,7 @@
 
 .ninja*
 
-*/*/build
+*/*/build*
+*/build/
+
+tp_1/build/

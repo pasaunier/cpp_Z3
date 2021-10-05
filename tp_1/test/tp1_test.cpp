@@ -280,45 +280,47 @@ TEST_CASE("TP1_Nuage::Ajout")
 }
 
 //----------------------------------------------------------------------------------------------- 19
-/*TEST_CASE ( "TP1_Nuage::Iterateurs" ) {
- Cartesien p1(12.0,24.0);
- Polaire p2(13.0,25.0);
- Polaire p3(p1);
- Cartesien p4(p2);
+TEST_CASE("TP1_Nuage::Iterateurs")
+{
+    Cartesien p1(12.0, 24.0);
+    Polaire p2(13.0, 25.0);
+    Polaire p3(p1);
+    Cartesien p4(p2);
 
- Nuage n;
+    Nuage n;
 
- n.ajouter(p1);
- n.ajouter(p2);
- n.ajouter(p3);
- n.ajouter(p4);
+    n.ajouter(p1);
+    n.ajouter(p2);
+    n.ajouter(p3);
+    n.ajouter(p4);
 
- Point * t[4];
- unsigned i = 0;
- Nuage::const_iterator it = n.begin();
+    Point* t[4];
+    unsigned i = 0;
+    Nuage::const_iterator it = n.begin();
 
- while (it!=n.end()) t[i++]=*(it++);
+    while(it != n.end())
+        t[i++] = *(it++);
 
- REQUIRE ( typeid(*(t[0])) == typeid(Cartesien) );
- REQUIRE ( typeid(*(t[1])) == typeid(Polaire) );
- REQUIRE ( typeid(*(t[2])) == typeid(Polaire) );
- REQUIRE ( typeid(*(t[3])) == typeid(Cartesien) );
+    REQUIRE(typeid(*(t[0])) == typeid(Cartesien));
+    REQUIRE(typeid(*(t[1])) == typeid(Polaire));
+    REQUIRE(typeid(*(t[2])) == typeid(Polaire));
+    REQUIRE(typeid(*(t[3])) == typeid(Cartesien));
 
- Cartesien & p5 = *static_cast<Cartesien *>(t[0]);
- Polaire & p6 = *static_cast<Polaire *>(t[1]);
- Polaire & p7 = *static_cast<Polaire *>(t[2]);
- Cartesien & p8 = *static_cast<Cartesien *>(t[3]);
+    Cartesien& p5 = *static_cast<Cartesien*>(t[0]);
+    Polaire& p6 = *static_cast<Polaire*>(t[1]);
+    Polaire& p7 = *static_cast<Polaire*>(t[2]);
+    Cartesien& p8 = *static_cast<Cartesien*>(t[3]);
 
- REQUIRE ( p5.getX() == Approx(12.0) );
- REQUIRE ( p5.getY() == Approx(24.0) );
- REQUIRE ( p6.getAngle() == Approx(13.0) );
- REQUIRE ( p6.getDistance() == Approx(25.0) );
+    REQUIRE(p5.getX() == Approx(12.0));
+    REQUIRE(p5.getY() == Approx(24.0));
+    REQUIRE(p6.getAngle() == Approx(13.0));
+    REQUIRE(p6.getDistance() == Approx(25.0));
 
- REQUIRE ( p7.getAngle() == Approx(63.434948).epsilon(1e-3) );
- REQUIRE ( p7.getDistance() == Approx(26.832815).epsilon(1e-3) );
- REQUIRE ( p8.getX() == Approx(24.359251).epsilon(1e-3) );
- REQUIRE ( p8.getY() == Approx(5.623776).epsilon(1e-3) );
-}*/
+    REQUIRE(p7.getAngle() == Approx(63.434948).epsilon(1e-3));
+    REQUIRE(p7.getDistance() == Approx(26.832815).epsilon(1e-3));
+    REQUIRE(p8.getX() == Approx(24.359251).epsilon(1e-3));
+    REQUIRE(p8.getY() == Approx(5.623776).epsilon(1e-3));
+}
 
 //--------------------------------------------------------------------------------------Commun 20-22
 /*double x[] = { 3,7,13,27 };
