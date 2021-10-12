@@ -31,15 +31,18 @@
 *.out
 *.app
 
+# Vscode cache
 */.vscode
 
+# CMake files
 *CMakeCache.txt
 *.cmake
 */CMakeFiles
+*/*/CMakeFiles
 
+# Ninja build files
 *.ninja
 
-*/*/CMakeFiles
 
 .ninja*
 
@@ -47,3 +50,7 @@
 */build/
 
 tp_1/build/
+
+catch.hpp
+
+
