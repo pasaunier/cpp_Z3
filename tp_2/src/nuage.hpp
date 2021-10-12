@@ -37,9 +37,13 @@ T barycentre_v1(const Nuage<T>& nuage)
 
     for(const auto& elem : nuage)
     {
-        retX += elem.getX();
-        retY += elem.getY();
+        const Cartesien conv{elem};
+
+        retX += conv.getX();
+        retY += conv.getY();
     }
 
-    return T(retX / count, retY / count);
+    Cartesien retval{retX / count, retY / count};
+
+    return T(retval);
 }
