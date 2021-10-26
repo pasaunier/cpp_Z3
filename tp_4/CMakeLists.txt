@@ -1,11 +1,9 @@
 # Project #-----------------------------------------------------------------------------------------
-project ( tp2 )
+project ( tp4 )
 
-cmake_minimum_required ( VERSION 3.0.0 )
+cmake_minimum_required ( VERSION 3.0.9 )
 
 find_package ( Threads )
-
-set_property(GLOBAL PROPERTY CXX_STANDARD 20)
 
 # C++ Warning Level #-------------------------------------------------------------------------------
 if ( CMAKE_COMPILER_IS_GNUCXX )
@@ -36,16 +34,21 @@ message ( STATUS "Compiler flags: ${CMAKE_CXX_FLAGS}" )
 
 # Sources #-----------------------------------------------------------------------------------------
 set ( ZZ3_HEADERS
-      src/cartesien.hpp
-      src/nuage.hpp
-      src/point.hpp
-      src/polaire.hpp
+      #src/carte.hpp
+      src/complexe.hpp
+      #src/consommateur.hpp
+      src/mouchard.hpp
+      #src/paquet.hpp
+      #src/ressource.hpp
+      #src/usine.hpp
+      src/vecteur.hpp
     )
 
 set ( ZZ3_SOURCES
-      src/cartesien.cpp
-      src/point.cpp
-      src/polaire.cpp
+      #src/carte.cpp
+      #src/paquet.cpp
+      #src/ressource.cpp
+      #src/usine.cpp
     )
 
 set ( ZZ3_HEADERS_TEST
@@ -57,8 +60,14 @@ set ( ZZ3_SOURCES_TEST
 include_directories ( src/ )
 
 # Executables #-------------------------------------------------------------------------------------
-add_executable ( ${CMAKE_PROJECT_NAME}_nuage
-                 src/main_nuage.cpp
+add_executable ( ${CMAKE_PROJECT_NAME}_mouchard
+                 test/test_mouchard.cpp
+                 ${ZZ3_HEADERS}
+                 ${ZZ3_SOURCES}
+               )
+
+add_executable ( ${CMAKE_PROJECT_NAME}_vecteur
+                 test/test_vecteur.cpp
                  ${ZZ3_HEADERS}
                  ${ZZ3_SOURCES}
                )
@@ -73,8 +82,11 @@ add_executable ( ${CMAKE_PROJECT_NAME}_test
                )
 
 # Build #-------------------------------------------------------------------------------------------
-set_target_properties ( ${CMAKE_PROJECT_NAME}_nuage PROPERTIES LINKER_LANGUAGE C )
-target_link_libraries ( ${CMAKE_PROJECT_NAME}_nuage ${CMAKE_THREAD_LIBS_INIT} )
+set_target_properties ( ${CMAKE_PROJECT_NAME}_mouchard PROPERTIES LINKER_LANGUAGE C )
+target_link_libraries ( ${CMAKE_PROJECT_NAME}_mouchard ${CMAKE_THREAD_LIBS_INIT} )
+
+set_target_properties ( ${CMAKE_PROJECT_NAME}_vecteur PROPERTIES LINKER_LANGUAGE C )
+target_link_libraries ( ${CMAKE_PROJECT_NAME}_vecteur ${CMAKE_THREAD_LIBS_INIT} )
 
 set_target_properties ( ${CMAKE_PROJECT_NAME}_test PROPERTIES LINKER_LANGUAGE C )
 target_link_libraries ( ${CMAKE_PROJECT_NAME}_test ${CMAKE_THREAD_LIBS_INIT} )

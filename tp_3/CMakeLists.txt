@@ -1,11 +1,9 @@
 # Project #-----------------------------------------------------------------------------------------
-project ( tp2 )
+project ( tp3 )
 
 cmake_minimum_required ( VERSION 3.0.0 )
 
 find_package ( Threads )
-
-set_property(GLOBAL PROPERTY CXX_STANDARD 20)
 
 # C++ Warning Level #-------------------------------------------------------------------------------
 if ( CMAKE_COMPILER_IS_GNUCXX )
@@ -15,12 +13,18 @@ endif()
 # C++11 #-------------------------------------------------------------------------------------------
 include ( CheckCXXCompilerFlag )
 
+check_cxx_compiler_flag ( "-std=gnu++17" COMPILER_SUPPORTS_CPP17 )
+check_cxx_compiler_flag ( "-std=gnu++1z" COMPILER_SUPPORTS_CPP1Z )
 check_cxx_compiler_flag ( "-std=gnu++14" COMPILER_SUPPORTS_CPP14 )
 check_cxx_compiler_flag ( "-std=gnu++1y" COMPILER_SUPPORTS_CPP1Y )
 check_cxx_compiler_flag ( "-std=gnu++11" COMPILER_SUPPORTS_CPP11 )
 check_cxx_compiler_flag ( "-std=gnu++0x" COMPILER_SUPPORTS_CPP0X )
 
-if ( COMPILER_SUPPORTS_CPP14 )
+if ( COMPILER_SUPPORTS_CPP17 )
+ set ( CMAKE_CXX_FLAGS "-std=gnu++17 ${CMAKE_CXX_FLAGS}" )
+elseif ( COMPILER_SUPPORTS_CPP1Z )
+ set ( CMAKE_CXX_FLAGS "-std=gnu++1z ${CMAKE_CXX_FLAGS}" )
+elseif ( COMPILER_SUPPORTS_CPP14 )
  set ( CMAKE_CXX_FLAGS "-std=gnu++14 ${CMAKE_CXX_FLAGS}" )
 elseif ( COMPILER_SUPPORTS_CPP1Y )
  set ( CMAKE_CXX_FLAGS "-std=gnu++1y ${CMAKE_CXX_FLAGS}" )
@@ -36,16 +40,12 @@ message ( STATUS "Compiler flags: ${CMAKE_CXX_FLAGS}" )
 
 # Sources #-----------------------------------------------------------------------------------------
 set ( ZZ3_HEADERS
-      src/cartesien.hpp
-      src/nuage.hpp
-      src/point.hpp
-      src/polaire.hpp
+      src/chaine.hpp
+      src/demangle.hpp
+      #src/exception.hpp
     )
 
 set ( ZZ3_SOURCES
-      src/cartesien.cpp
-      src/point.cpp
-      src/polaire.cpp
     )
 
 set ( ZZ3_HEADERS_TEST
@@ -57,12 +57,6 @@ set ( ZZ3_SOURCES_TEST
 include_directories ( src/ )
 
 # Executables #-------------------------------------------------------------------------------------
-add_executable ( ${CMAKE_PROJECT_NAME}_nuage
-                 src/main_nuage.cpp
-                 ${ZZ3_HEADERS}
-                 ${ZZ3_SOURCES}
-               )
-
 add_executable ( ${CMAKE_PROJECT_NAME}_test
                  test/catch.cpp
                  test/${CMAKE_PROJECT_NAME}_test.cpp
@@ -73,8 +67,6 @@ add_executable ( ${CMAKE_PROJECT_NAME}_test
                )
 
 # Build #-------------------------------------------------------------------------------------------
-set_target_properties ( ${CMAKE_PROJECT_NAME}_nuage PROPERTIES LINKER_LANGUAGE C )
-target_link_libraries ( ${CMAKE_PROJECT_NAME}_nuage ${CMAKE_THREAD_LIBS_INIT} )
 
 set_target_properties ( ${CMAKE_PROJECT_NAME}_test PROPERTIES LINKER_LANGUAGE C )
 target_link_libraries ( ${CMAKE_PROJECT_NAME}_test ${CMAKE_THREAD_LIBS_INIT} )
