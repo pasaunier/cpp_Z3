@@ -12,12 +12,13 @@
 
 // Tests //-----------------------------------------------------------------------------------------
 
-template <typename T,typename = void> struct has_public_constructor : std::false_type {};
+template<typename T, typename = void>
+struct has_public_constructor : std::false_type
+{};
 
-template <typename T>
-struct has_public_constructor< T,
-                               std::enable_if_t<std::is_same<T,decltype(T(1))>::value>
-                             > : std::true_type {};
+template<typename T>
+struct has_public_constructor<T, std::enable_if_t<std::is_same<T, decltype(T(1))>::value>> : std::true_type
+{};
 
 //------------------------------------------------------------------------------------------------ 1
 /*TEST_CASE ( "TP4_Carte::Usine52" ) {
