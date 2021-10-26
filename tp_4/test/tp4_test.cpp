@@ -1,14 +1,14 @@
 // Entetes //---------------------------------------------------------------------------------------
 #include "catch.hpp"
 
+#include <carte.hpp>
+#include <consommateur.hpp>
+#include <paquet.hpp>
+#include <ressource.hpp>
+#include <usine.hpp>
+
 #include <sstream>
 #include <type_traits>
-
-//#include <carte.hpp>
-//#include <usine.hpp>
-//#include <paquet.hpp>
-//#include <ressource.hpp>
-//#include <consommateur.hpp>
 
 // Tests //-----------------------------------------------------------------------------------------
 
@@ -21,20 +21,22 @@ struct has_public_constructor<T, std::enable_if_t<std::is_same<T, decltype(T(1))
 {};
 
 //------------------------------------------------------------------------------------------------ 1
-/*TEST_CASE ( "TP4_Carte::Usine52" ) {
- UsineCarte usine;
+TEST_CASE("TP4_Carte::Usine52")
+{
+    UsineCarte usine;
 
- for (unsigned i = 0; i<52; ++i) {
-  std::unique_ptr<Carte> carte(usine.getCarte());
+    for(unsigned i = 0; i < 52; ++i)
+    {
+        std::unique_ptr<Carte> carte(usine.getCarte());
 
-  REQUIRE ( carte->getValeur() == i );
- }
+        REQUIRE(carte->getValeur() == i);
+    }
 
- REQUIRE ( usine.getCarte() == nullptr );
-}*/
+    REQUIRE(usine.getCarte() == nullptr);
+}
 
 //------------------------------------------------------------------------------------------------ 2
-/*TEST_CASE ( "TP4_Carte::CarteInterface" ) {
+TEST_CASE ( "TP4_Carte::CarteInterface" ) {
  // Contructeur de copie existe ?
  REQUIRE ( std::is_copy_constructible<Carte>::value == false );
 
@@ -43,7 +45,7 @@ struct has_public_constructor<T, std::enable_if_t<std::is_same<T, decltype(T(1))
 
  // Constructeur ad hoc existe ?
  REQUIRE ( has_public_constructor<Carte>::value == false );
-}*/
+}
 
 //------------------------------------------------------------------------------------------------ 3
 /*TEST_CASE ( "TP4_Carte::UsineInterface" ) {
