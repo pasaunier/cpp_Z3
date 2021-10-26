@@ -21,5 +21,4 @@ class Carte
     Carte& operator()(Carte&) = delete;
     Carte& operator=(Carte&) = delete;
 
-    // friend std::unique_ptr<Carte> UsineCarte::getCarte();
 };

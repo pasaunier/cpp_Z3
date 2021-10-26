@@ -6,15 +6,23 @@
 class UsineCarte
 {
   private:
-    static unsigned s_cur_val;
+    unsigned m_cur_val{0};
+    const unsigned m_max_val;
 
   public:
+    UsineCarte(unsigned val = 52)
+      : m_max_val(val){};
+
+    UsineCarte(UsineCarte&) = delete;
+    UsineCarte& operator()(UsineCarte&) = delete;
+    UsineCarte& operator=(UsineCarte&) = delete;
+
     std::unique_ptr<Carte> getCarte()
     {
-        if(s_cur_val < 52)
+        if(m_cur_val < m_max_val)
         {
-            std::unique_ptr<Carte> ptr(new Carte(s_cur_val));
-            ++s_cur_val;
+            std::unique_ptr<Carte> ptr(new Carte(m_cur_val));
+            ++m_cur_val;
             return ptr;
         }
         else

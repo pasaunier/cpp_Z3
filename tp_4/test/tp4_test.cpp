@@ -36,28 +36,30 @@ TEST_CASE("TP4_Carte::Usine52")
 }
 
 //------------------------------------------------------------------------------------------------ 2
-TEST_CASE ( "TP4_Carte::CarteInterface" ) {
- // Contructeur de copie existe ?
- REQUIRE ( std::is_copy_constructible<Carte>::value == false );
+TEST_CASE("TP4_Carte::CarteInterface")
+{
+    // Contructeur de copie existe ?
+    REQUIRE(std::is_copy_constructible<Carte>::value == false);
 
- // Operateur d'affectation par copie existe ?
- REQUIRE ( std::is_copy_assignable<Carte>::value == false );
+    // Operateur d'affectation par copie existe ?
+    REQUIRE(std::is_copy_assignable<Carte>::value == false);
 
- // Constructeur ad hoc existe ?
- REQUIRE ( has_public_constructor<Carte>::value == false );
+    // Constructeur ad hoc existe ?
+    REQUIRE(has_public_constructor<Carte>::value == false);
 }
 
 //------------------------------------------------------------------------------------------------ 3
-/*TEST_CASE ( "TP4_Carte::UsineInterface" ) {
- // Contructeur de copie existe ?
- REQUIRE ( std::is_copy_constructible<UsineCarte>::value == false );
+TEST_CASE("TP4_Carte::UsineInterface")
+{
+    // Contructeur de copie existe ?
+    REQUIRE(std::is_copy_constructible<UsineCarte>::value == false);
 
- // Operateur d'affectation par copie existe ?
- REQUIRE ( std::is_copy_assignable<UsineCarte>::value == false );
-}*/
+    // Operateur d'affectation par copie existe ?
+    REQUIRE(std::is_copy_assignable<UsineCarte>::value == false);
+}
 
 //------------------------------------------------------------------------------------------------ 4
-/*TEST_CASE ( "TP4_Carte::UsineN" ) {
+TEST_CASE ( "TP4_Carte::UsineN" ) {
  const unsigned n = 32;
 
  UsineCarte usine(n);
@@ -69,7 +71,7 @@ TEST_CASE ( "TP4_Carte::CarteInterface" ) {
  }
 
  REQUIRE ( usine.getCarte() == nullptr );
-}*/
+}
 
 //------------------------------------------------------------------------------------------------ 5
 /*TEST_CASE ( "TP4_Carte::PaquetRemplir" ) {
