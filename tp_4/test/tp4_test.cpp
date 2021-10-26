@@ -10,6 +10,8 @@
 #include <sstream>
 #include <type_traits>
 
+// attention affectation par mouvement depuis un vecteur !!!!
+
 // Tests //-----------------------------------------------------------------------------------------
 
 template<typename T, typename = void>
@@ -59,18 +61,20 @@ TEST_CASE("TP4_Carte::UsineInterface")
 }
 
 //------------------------------------------------------------------------------------------------ 4
-TEST_CASE ( "TP4_Carte::UsineN" ) {
- const unsigned n = 32;
+TEST_CASE("TP4_Carte::UsineN")
+{
+    const unsigned n = 32;
 
- UsineCarte usine(n);
+    UsineCarte usine(n);
 
- for (unsigned i = 0; i<n; ++i) {
-  std::unique_ptr<Carte> carte(usine.getCarte());
+    for(unsigned i = 0; i < n; ++i)
+    {
+        std::unique_ptr<Carte> carte(usine.getCarte());
 
-  REQUIRE ( carte->getValeur() == i );
- }
+        REQUIRE(carte->getValeur() == i);
+    }
 
- REQUIRE ( usine.getCarte() == nullptr );
+    REQUIRE(usine.getCarte() == nullptr);
 }
 
 //------------------------------------------------------------------------------------------------ 5
