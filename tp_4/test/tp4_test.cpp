@@ -141,7 +141,7 @@ TEST_CASE("TP4_Carte::CarteDestruction")
 }
 
 //------------------------------------------------------------------------------------------------ 8
-/*TEST_CASE ( "TP4_Conso::Ressource" ) {
+TEST_CASE ( "TP4_Conso::Ressource" ) {
  Ressource r(17);
 
  REQUIRE ( r.getStock() == 17 );
@@ -149,10 +149,10 @@ TEST_CASE("TP4_Carte::CarteDestruction")
  r.consommer(6);
 
  REQUIRE ( r.getStock() == 11 );
-}*/
+}
 
 //------------------------------------------------------------------------------------------------ 9
-/*TEST_CASE ( "TP4_Conso::Consommateur" ) {
+TEST_CASE ( "TP4_Conso::Consommateur" ) {
  std::shared_ptr<Ressource> r(new Ressource(17));
  Consommateur c(3,r);
 
@@ -161,10 +161,10 @@ TEST_CASE("TP4_Carte::CarteDestruction")
  c.puiser();
 
  REQUIRE ( r->getStock() == 14 );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 10
-/*TEST_CASE ( "TP4_Conso::RessoureEpuisee" ) {
+TEST_CASE ( "TP4_Conso::RessoureEpuisee" ) {
  std::shared_ptr<Ressource> r(new Ressource(5));
  Consommateur c(3,r);
 
@@ -180,10 +180,10 @@ TEST_CASE("TP4_Carte::CarteDestruction")
 
  REQUIRE ( r->getStock() == 0 );
  REQUIRE ( r.use_count() == 1 );
-}*/
+}
 
 //----------------------------------------------------------------------------------------------- 11
-/*TEST_CASE ( "TP4_Conso::SurveillanceRessources" ) {
+TEST_CASE ( "TP4_Conso::SurveillanceRessources" ) {
  std::shared_ptr<Ressource> r1(new Ressource(14));
  std::shared_ptr<Ressource> r2(new Ressource(7));
  std::shared_ptr<Ressource> r3(new Ressource(13));
@@ -237,6 +237,6 @@ TEST_CASE("TP4_Carte::CarteDestruction")
  for (unsigned i = 0; i<4; ++i) {
   REQUIRE ( ressources[i].use_count() == 0 );
  }
-}*/
+}
 
 // Fin //-------------------------------------------------------------------------------------------
