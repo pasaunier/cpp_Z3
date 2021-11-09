@@ -78,61 +78,66 @@ TEST_CASE("TP4_Carte::UsineN")
 }
 
 //------------------------------------------------------------------------------------------------ 5
-TEST_CASE ( "TP4_Carte::PaquetRemplir" ) {
- const unsigned n = 27;
+TEST_CASE("TP4_Carte::PaquetRemplir")
+{
+    const unsigned n = 27;
 
- paquet_t paquet;
- UsineCarte usine(n);
+    paquet_t paquet;
+    UsineCarte usine(n);
 
- remplir(paquet,usine);
+    remplir(paquet, usine);
 
- for (unsigned i = 0; i<n; ++i) {
-  REQUIRE ( paquet[i]->getValeur() == i );
- }
+    for(unsigned i = 0; i < n; ++i)
+    {
+        REQUIRE(paquet[i]->getValeur() == i);
+    }
 }
 
 //------------------------------------------------------------------------------------------------ 6
-TEST_CASE ( "TP4_Carte::PaquetFlux" ) {
- const unsigned n = 27;
+TEST_CASE("TP4_Carte::PaquetFlux")
+{
+    const unsigned n = 27;
 
- paquet_t paquet;
- UsineCarte usine(n);
+    paquet_t paquet;
+    UsineCarte usine(n);
 
- remplir(paquet,usine);
+    remplir(paquet, usine);
 
- std::stringstream s1;
+    std::stringstream s1;
 
- s1 << paquet;
+    s1 << paquet;
 
- std::stringstream s2;
+    std::stringstream s2;
 
- for (unsigned i = 0; i<n; ++i) s2 << paquet[i]->getValeur() << " ";
+    for(unsigned i = 0; i < n; ++i)
+        s2 << paquet[i]->getValeur() << " ";
 
- REQUIRE (s1.str() == s2.str());
+    REQUIRE(s1.str() == s2.str());
 }
 
 //------------------------------------------------------------------------------------------------ 7
-TEST_CASE ( "TP4_Carte::CarteDestruction" ) {
- REQUIRE ( Carte::getCompteur() == 0 );
+TEST_CASE("TP4_Carte::CarteDestruction")
+{
+    REQUIRE(Carte::getCompteur() == 0);
 
- {
-  const unsigned n = 52;
+    {
+        const unsigned n = 52;
 
-  UsineCarte usine(n);
-  paquet_t paquet;
+        UsineCarte usine(n);
+        paquet_t paquet;
 
-  REQUIRE ( Carte::getCompteur() == 0 );
+        REQUIRE(Carte::getCompteur() == 0);
 
-  remplir(paquet,usine);
+        remplir(paquet, usine);
 
-  REQUIRE ( Carte::getCompteur() == n );
+        REQUIRE(Carte::getCompteur() == n);
 
-  std::cout << paquet << std::endl;
+        std::cout << paquet << std::endl;
 
-  REQUIRE ( Carte::getCompteur() == n );
- }
+        REQUIRE(Carte::getCompteur() == n);
+    }
 
- REQUIRE ( Carte::getCompteur() == 0 );
+    REQUIRE(Carte::getCompteur() == 0);
 }
 
 //------------------------------------------------------------------------------------------------ 8
