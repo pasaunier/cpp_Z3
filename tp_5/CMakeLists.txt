@@ -1,8 +1,6 @@
 # Project #-----------------------------------------------------------------------------------------
 project ( tp5 )
 
-cmake_minimum_required ( VERSION 2.8.9 )
-
 find_package ( Threads )
 
 # C++ Warning Level #-------------------------------------------------------------------------------
@@ -34,11 +32,11 @@ message ( STATUS "Compiler flags: ${CMAKE_CXX_FLAGS}" )
 
 # Sources #-----------------------------------------------------------------------------------------
 set ( ZZ3_HEADERS
-      #src/classe.hpp
-      #src/comparateur.hpp
-      #src/echantillon.hpp
-      #src/histogramme.hpp
-      #src/valeur.hpp
+      src/classe.hpp
+      src/comparateur.hpp
+      src/echantillon.hpp
+      src/histogramme.hpp
+      src/valeur.hpp
     )
 
 set ( ZZ3_SOURCES

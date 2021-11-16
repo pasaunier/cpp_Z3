@@ -1,67 +1,74 @@
 // Entetes //---------------------------------------------------------------------------------------
 #include "catch.hpp"
 
+#include <comparateur.hpp>
+#include <histogramme.hpp>
+
 #include <cmath>
 
-//#include <histogramme.hpp>
-//#include <comparateur.hpp>
-
-//using Histo = Histogramme; // A utiliser pour les tests 12-13
-//using Histo = Histogramme<>; // A utiliser a partir du test 14
+using Histo = Histogramme; // A utiliser pour les tests 12-13
+// using Histo = Histogramme<>; // A utiliser a partir du test 14
 
 // Tests //-----------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------ 1
-/*TEST_CASE ( "TP3_Valeur::Constructeur" ) {
- const double a = 12.0;
+TEST_CASE("TP3_Valeur::Constructeur")
+{
+    const double a = 12.0;
 
- Valeur v(a);
+    Valeur v(a);
 
- REQUIRE ( v.getNombre() == Approx(a) );
-}*/
+    REQUIRE(v.getNombre() == Approx(a));
+}
 
 //------------------------------------------------------------------------------------------------ 2
-/*TEST_CASE ( "TP3_Valeur::ConstructeurDefaut" ) {
- Valeur v;
+TEST_CASE("TP3_Valeur::ConstructeurDefaut")
+{
+    Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
-}*/
+    REQUIRE(v.getNombre() == Approx(0.0));
+}
 
 //------------------------------------------------------------------------------------------------ 3
-/*TEST_CASE ( "TP3_Valeur::Accesseurs" ) {
- const double a = 12.0;
+TEST_CASE("TP3_Valeur::Accesseurs")
+{
+    const double a = 12.0;
 
- Valeur v(13.0);
+    Valeur v(13.0);
 
- v.setNombre(a);
+    v.setNombre(a);
 
- REQUIRE ( v.getNombre() == Approx(a) );
-}*/
+    REQUIRE(v.getNombre() == Approx(a));
+}
 
 //------------------------------------------------------------------------------------------------ 4
-/*TEST_CASE ( "TP3_Valeur::AccesseursConstants" ) {
- const Valeur v;
+TEST_CASE("TP3_Valeur::AccesseursConstants")
+{
+    const Valeur v;
 
- REQUIRE ( v.getNombre() == Approx(0.0) );
-}*/
+    REQUIRE(v.getNombre() == Approx(0.0));
+}
 
 //------------------------------------------------------------------------------------------------ 5
-/*TEST_CASE ( "TP3_Echantillon::Constructeur" ) {
- Echantillon e;
+TEST_CASE("TP3_Echantillon::Constructeur")
+{
+    Echantillon e;
 
- REQUIRE ( e.getTaille() == 0u );
-}*/
+    REQUIRE(e.getTaille() == 0u);
+}
 
 //------------------------------------------------------------------------------------------------ 6
-/*TEST_CASE ( "TP3_Echantillon::Ajout" ) {
- Echantillon e;
+TEST_CASE("TP3_Echantillon::Ajout")
+{
+    Echantillon e;
 
- double v[] = { 5.0, 10.0, 15.0, 20.0 };
+    double v[] = {5.0, 10.0, 15.0, 20.0};
 
- for (unsigned i = 0; i<4; ++i) e.ajouter(v[i]);
+    for(unsigned i = 0; i < 4; ++i)
+        e.ajouter(v[i]);
 
- REQUIRE ( e.getTaille() == 4u );
-}*/
+    REQUIRE(e.getTaille() == 4u);
+}
 
 //------------------------------------------------------------------------------------------------ 7
 /*TEST_CASE ( "TP3_Echantillon::MinMax" ) {

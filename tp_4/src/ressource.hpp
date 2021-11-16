@@ -39,7 +39,7 @@ std::ostream& operator<<(std::ostream& os, ressources_t& res)
         }
         else
         {
-            os << *elem.getStock() << ' ';
+            os << elem->getStock() << ' ';
         }
     }
     os << std::endl;
