@@ -3,6 +3,8 @@
 #include "echantillon.hpp"
 #include "valeur.hpp"
 
+#include <iostream>
+
 class Histogramme
 {
     std::vector<Classe> m_classes;
@@ -27,14 +29,18 @@ class Histogramme
         }
     }
 
-    void ajouter(Echantillon val)
+    void ajouter(Echantillon ech)
     {
         for(auto& elem : m_classes)
         {
-            if(val.getMinimum().getNombre() >= elem.getBorneInf() && val.getMaximum().getNombre() <= elem.getBorneSup())
+            for(const auto& val : ech.getVect())
             {
-                elem.ajouter(val.getTaille());
-                        }
+                if(val.getNombre() >= elem.getBorneInf() && val.getNombre() < elem.getBorneSup())
+                {
+                    elem.ajouter();
+                    continue;
+                }
+            }
         }
     }
 };

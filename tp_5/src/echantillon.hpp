@@ -13,6 +13,9 @@ class Echantillon
   public:
     size_t getTaille() const { return m_vect.size(); }
 
+    std::vector<Valeur>& getVect() { return m_vect; }
+    const std::vector<Valeur>& getVect() const { return m_vect; }
+
     // Valeur getMinimum() const
     // {
     //     return *std::min_element(
@@ -42,6 +45,4 @@ class Echantillon
 
         return m_vect.at(arg); // at() a déja les erreurs :)
     }
-
-    
 };
