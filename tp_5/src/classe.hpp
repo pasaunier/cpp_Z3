@@ -12,7 +12,7 @@ class Classe
       , m_sup(max)
     {}
 
-    void ajouter(unsigned val=1) { m_quantite+= val; }
+    void ajouter(unsigned val = 1) { m_quantite += val; }
 
     double getBorneInf() const { return m_inf; }
     double getBorneSup() const { return m_sup; }
@@ -22,12 +22,22 @@ class Classe
     void setBorneInf(double a) { m_inf = a; }
     void setQuantite(unsigned a) { m_quantite = a; }
 
-    bool addif(const double& val)
+    bool operator<(const Classe& dos) const
     {
-        if(val > getBorneInf() && val < getBorneSup())
-
+        if(m_inf < dos.m_inf)
         {
-            ajouter();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool operator>(const Classe& dos) const
+    {
+        if(m_inf > dos.m_inf)
+        {
             return true;
         }
         else

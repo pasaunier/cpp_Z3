@@ -38,7 +38,7 @@ class Echantillon
 
     void ajouter(Valeur arg) { m_vect.push_back(arg); }
 
-    Valeur getValeur(unsigned arg)
+    Valeur getValeur(const unsigned arg) const
     {
         // if(arg > m_vect.size())
         //     throw std::out_of_range("");
